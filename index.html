@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142747">
+<title>مغامرة في الدولة العباسية</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+:root{--navy:#142747;--gold:#e8b94f;--teal:#2c9c91;--cream:#fff9eb;--ink:#20304b;--muted:#718096}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'Tajawal',Arial,sans-serif;background:radial-gradient(circle at 15% 15%,#e8f3ed 0 12%,transparent 13%),linear-gradient(135deg,#eaf1e9,#f7edda);color:var(--ink);display:flex;justify-content:center;align-items:center;padding:20px}
+.shell{width:min(760px,100%);background:#fffdf7;border:1px solid #e8dfc9;border-radius:28px;overflow:hidden;box-shadow:0 18px 55px #14274720}
+.top{background:var(--navy);color:white;text-align:center;padding:26px 22px 24px;position:relative}
+.top:before,.top:after{content:"✦";position:absolute;color:var(--gold);font-size:25px;top:20px}.top:before{right:24px}.top:after{left:24px}
+.eyebrow{color:#f2d88f;font-weight:700;font-size:14px;letter-spacing:.4px}
+h1{font-size:clamp(27px,6vw,39px);margin:9px 0 5px;font-weight:900}.sub{color:#dce7f2;margin:0;font-size:16px}
+.content{padding:clamp(20px,5vw,38px)}
+.hero-icon{font-size:54px;margin-bottom:8px}
+.center{text-align:center}.intro{font-size:18px;line-height:1.8;color:#526078;margin:8px auto 22px;max-width:550px}
+.pills{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:18px 0 24px}
+.pill{background:#f2ead7;color:#6e5723;padding:8px 13px;border-radius:30px;font-size:14px;font-weight:700}
+button{font:inherit;cursor:pointer;border:0}
+.primary{background:var(--teal);color:white;font-weight:800;padding:14px 30px;border-radius:15px;font-size:18px;box-shadow:0 5px 0 #1c7068;transition:.15s}
+.primary:active{transform:translateY(3px);box-shadow:0 2px 0 #1c7068}
+.progressrow{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:700;color:#607087;font-size:14px;margin-bottom:12px}
+.bar{height:10px;background:#e9edf0;border-radius:20px;overflow:hidden;margin-bottom:24px}.fill{height:100%;background:linear-gradient(90deg,var(--teal),#83c6a8);width:0%;transition:width .3s}
+.qtag{display:inline-block;background:#f7edcf;color:#8a6820;padding:7px 13px;border-radius:30px;font-size:14px;font-weight:800;margin-bottom:12px}
+.question{font-size:clamp(21px,4.5vw,27px);font-weight:800;line-height:1.55;margin:0 0 20px;color:var(--navy)}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.answer{background:#f5f7f5;border:2px solid #e5eae6;border-radius:15px;padding:15px 14px;text-align:right;color:#263851;font-size:17px;font-weight:700;min-height:62px;transition:.15s}
+.answer:hover:not(:disabled){border-color:#8dc8ba;background:#eef8f4}
+.answer:disabled{cursor:default;opacity:1}
+.answer.correct{background:#e4f5e9;border-color:#45a66a;color:#17633b}
+.answer.wrong{background:#fff0e9;border-color:#df8764;color:#9a4328}
+.feedback{margin-top:17px;padding:14px 16px;border-radius:14px;line-height:1.6;font-weight:700;display:none}
+.feedback.show{display:block}.feedback.good{background:#e8f6eb;color:#21633c}.feedback.bad{background:#fff1e9;color:#93482e}
+.actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.small{color:var(--muted);font-size:14px}
+.result-score{font-size:58px;font-weight:900;color:var(--teal);margin:8px 0}
+.result-title{font-size:27px;font-weight:900;color:var(--navy);margin:8px}
+.result-text{font-size:18px;line-height:1.8;color:#53627a;margin:10px auto 18px;max-width:520px}
+.student{margin-top:24px;padding:17px;background:#f4efdf;border:1px dashed #c9b77d;border-radius:16px;line-height:1.9;font-weight:800}
+.student span{color:#8a6820}
+.hidden{display:none!important}
+@media(max-width:520px){body{padding:10px}.shell{border-radius:21px}.answers{grid-template-columns:1fr}.answer{min-height:55px}.top{padding:23px 16px}.content{padding:22px 17px}.actions{align-items:stretch}.actions button{flex:1}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header class="top">
+<div class="eyebrow">رحلة تعليمية ممتعة للصف الخامس</div>
+<h1>مغامرة في الدولة العباسية</h1>
+<p class="sub">اختبر معلوماتك واجمع أكبر عدد من النقاط!</p>
+</header>
+<section id="start" class="content center">
+<div class="hero-icon">🏛️📜</div>
+<p class="intro">استعد لرحلة بين الخلفاء والعلماء والمدن التاريخية. أجب عن الأسئلة، وتعرّف إلى أحداث الدولة العباسية وإنجازاتها.</p>
+<div class="pills"><span class="pill">١٥ سؤالًا</span><span class="pill">اختيار من متعدد</span><span class="pill">نقطة لكل إجابة صحيحة</span></div>
+<button class="primary" onclick="begin()">ابدأ المغامرة ←</button>
+</section>
+<section id="quiz" class="content hidden">
+<div class="progressrow"><span id="counter">السؤال ١ من ١٥</span><span id="score">⭐ النقاط: ٠</span></div>
+<div class="bar"><div class="fill" id="fill"></div></div>
+<div class="qtag" id="category">قيام الدولة العباسية</div>
+<h2 class="question" id="question"></h2>
+<div class="answers" id="answers"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<div class="actions"><span class="small" id="hint">اختر إجابة واحدة</span><button class="primary hidden" id="next" onclick="nextQuestion()">السؤال التالي ←</button></div>
+</section>
+<section id="end" class="content center hidden">
+<div class="hero-icon" id="medal">🏆</div>
+<div class="result-title" id="resultTitle">أحسنت!</div>
+<div class="result-score" id="finalScore">٠ / ١٥</div>
+<div class="result-text" id="resultText"></div>
+<div class="pills"><span class="pill" id="correctPill">الإجابات الصحيحة: ٠</span><span class="pill" id="wrongPill">الإجابات غير الصحيحة: ٠</span></div>
+<div class="student"><span>إعداد الطالبة:</span> مريم علي حسين<br><span>الصف:</span> خامس ١</div>
+<button class="primary" style="margin-top:22px" onclick="restart()">العب مرة أخرى ↻</button>
+</section>
+</main>
+<script>
+const questions = [
+{c:"قيام الدولة العباسية",q:"إلى من ينتسب العباسيون؟",a:["العباس عمّ الرسول ﷺ","علي بن أبي طالب","معاوية بن أبي سفيان","عبد الرحمن الداخل"],k:0,e:"ينتسب العباسيون إلى العباس عمّ الرسول ﷺ."},
+{c:"قيام الدولة العباسية",q:"في أي سنة انتصر العباسيون على الأمويين في معركة الزاب؟",a:["١٠٠هـ","١٣٢هـ","١٤٥هـ","١٥٦هـ"],k:1,e:"كان انتصار العباسيين في معركة الزاب سنة ١٣٢هـ."},
+{c:"أبرز الخلفاء العباسيين",q:"من مؤسس الدولة العباسية؟",a:["هارون الرشيد","المأمون","أبو جعفر المنصور","المهدي"],k:2,e:"أبو جعفر المنصور هو المؤسس الحقيقي للدولة العباسية."},
+{c:"أبرز الخلفاء العباسيين",q:"ما عاصمة الدولة العباسية التي بناها أبو جعفر المنصور؟",a:["دمشق","قرطبة","القاهرة","بغداد"],k:3,e:"بنى أبو جعفر المنصور بغداد لتكون عاصمة للدولة العباسية."},
+{c:"أبرز الخلفاء العباسيين",q:"ما النظام الذي أدخله أبو جعفر المنصور في الحكم؟",a:["نظام الوزارة","نظام الانتخابات","نظام المجالس البلدية","نظام الولايات المستقلة"],k:0,e:"أدخل أبو جعفر المنصور نظام الوزارة في الحكم."},
+{c:"أبرز الخلفاء العباسيين",q:"في عهد أي خليفة أصبحت بغداد مقرًّا للعلماء والأدباء؟",a:["المأمون","هارون الرشيد","أبو جعفر المنصور","المعتصم"],k:1,e:"ازدهرت بغداد في عهد هارون الرشيد وأصبحت مقصدًا للعلماء والأدباء."},
+{c:"أبرز الخلفاء العباسيين",q:"من الخليفة الذي شجّع الحركات الأدبية وخصوصًا الترجمة؟",a:["المهدي","الأمين","المأمون","أبو العباس"],k:2,e:"شجّع الخليفة المأمون الحركات الأدبية، واهتم بالترجمة."},
+{c:"انتشار الإسلام",q:"ما الطريق الذي أسهم في انتشار الإسلام في العهد العباسي؟",a:["التجارة عن طريق التجار المسلمين","الرحلات البحرية فقط","الحروب في الأندلس","الهجرة إلى بغداد"],k:0,e:"أسهم التجار المسلمون في نشر الإسلام في مناطق متعددة."},
+{c:"انتشار الإسلام",q:"في أي المناطق أسهم التجار المسلمون في نشر الإسلام؟",a:["أوروبا الشمالية فقط","الهند وأندونيسيا ووسط أفريقيا","الأندلس وحدها","بلاد الشام فقط"],k:1,e:"انتشر الإسلام في مناطق من الهند وأندونيسيا ووسط أفريقيا وغيرها."},
+{c:"العلاقات مع الأمويين في الأندلس",q:"من الأمير الأموي الذي وصل إلى الأندلس وأسس دولة مستقلة؟",a:["أبو جعفر المنصور","هارون الرشيد","عبد الرحمن بن معاوية","المأمون"],k:2,e:"نجح عبد الرحمن بن معاوية في الوصول إلى الأندلس وتأسيس دولة أموية مستقلة."},
+{c:"العلاقات مع الأمويين في الأندلس",q:"في أي سنة تأسست الدولة الأموية المستقلة في الأندلس؟",a:["١٣٢هـ","١٣٨هـ","١٤٥هـ","١٥٦هـ"],k:1,e:"تأسست الدولة الأموية المستقلة في الأندلس سنة ١٣٨هـ."},
+{c:"العلاقات مع الأمويين في الأندلس",q:"ما عاصمة الدولة الأموية في الأندلس؟",a:["بغداد","دمشق","قرطبة","القاهرة"],k:2,e:"اتخذت الدولة الأموية في الأندلس قرطبة عاصمة لها."},
+{c:"تفكك الدولة العباسية",q:"ما أحد أسباب تفكك الدولة العباسية؟",a:["تقوية سلطة الخليفة","ضعف نفوذ القادة","تقوية نفوذ الموالي وضعف سلطة الخلافة","ازدهار التجارة"],k:2,e:"أدى تقوّي نفوذ الموالي إلى ضعف سلطة الخلافة."},
+{c:"تفكك الدولة العباسية",q:"في أيدي من أصبح الحكم الفعلي أحيانًا؟",a:["التجار والعلماء","الأتراك والفرس","الأمويين في الأندلس","الفلاحين"],k:1,e:"أصبح الحكم الفعلي أحيانًا في أيدي الأتراك وتارة في أيدي الفرس."},
+{c:"تفكك الدولة العباسية",q:"ماذا ساعد النفوذ الأجنبي على ظهورِه في الدولة العباسية؟",a:["دول مستقلة في بعض المناطق","عاصمة جديدة في الأندلس","انتهاء التجارة","اختفاء المدن"],k:0,e:"ساعد النفوذ الأجنبي على قيام دويلات مستقلة في مناطق مختلفة، ومنها الدولة الفاطمية."}
+];
+let index=0, points=0, locked=false;
+const digits=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+function show(id){document.getElementById(id).classList.remove("hidden")}
+function hide(id){document.getElementById(id).classList.add("hidden")}
+function begin(){index=0;points=0;hide("start");hide("end");show("quiz");render()}
+function render(){
+ locked=false;const q=questions[index];
+ document.getElementById("counter").textContent=`السؤال ${digits(index+1)} من ${digits(questions.length)}`;
+ document.getElementById("score").textContent=`⭐ النقاط: ${digits(points)}`;
+ document.getElementById("fill").style.width=`${index/questions.length*100}%`;
+ document.getElementById("category").textContent=q.c;
+ document.getElementById("question").textContent=q.q;
+ document.getElementById("feedback").className="feedback";
+ document.getElementById("feedback").textContent="";
+ document.getElementById("hint").textContent="اختر إجابة واحدة";
+ hide("next");
+ const area=document.getElementById("answers");area.innerHTML="";
+ q.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=`${["أ","ب","ج","د"][i]} — ${answer}`;b.onclick=()=>choose(i,b);area.appendChild(b)});
+}
+function choose(choice,button){
+ if(locked)return;locked=true;const q=questions[index];const buttons=[...document.querySelectorAll(".answer")];
+ buttons.forEach((b,i)=>{b.disabled=true;if(i===q.k)b.classList.add("correct")});
+ const f=document.getElementById("feedback");
+ if(choice===q.k){points++;f.textContent="إجابة صحيحة! ⭐ "+q.e;f.className="feedback show good"}
+ else{button.classList.add("wrong");f.textContent="ليست هذه الإجابة الصحيحة. "+q.e;f.className="feedback show bad"}
+ document.getElementById("score").textContent=`⭐ النقاط: ${digits(points)}`;
+ document.getElementById("hint").textContent=choice===q.k?"رائع! واصل التقدم":"تعلّمنا معلومة جديدة، هيا نكمل";
+ document.getElementById("next").textContent=index===questions.length-1?"عرض النتيجة 🏆":"السؤال التالي ←";
+ show("next");
+}
+function nextQuestion(){index++;if(index<questions.length)render();else finish()}
+function finish(){
+ hide("quiz");show("end");document.getElementById("fill").style.width="100%";
+ document.getElementById("finalScore").textContent=`${digits(points)} / ${digits(questions.length)}`;
+ document.getElementById("correctPill").textContent=`الإجابات الصحيحة: ${digits(points)}`;
+ document.getElementById("wrongPill").textContent=`الإجابات غير الصحيحة: ${digits(questions.length-points)}`;
+ let title,msg,medal;
+ if(points>=13){title="ممتاز! يا بطلة التاريخ";msg="أبدعتِ! لديكِ معرفة رائعة بالدولة العباسية. واصلي حبّ التعلّم والاستكشاف.";medal="🏆"}
+ else if(points>=9){title="أحسنتِ، تقدّم جميل!";msg="نتيجة جميلة! راجعي الأسئلة التي تعلّمتِ منها، وستحققين نتيجة أعلى في المرة القادمة.";medal="🌟"}
+ else{title="محاولة رائعة!";msg="كل محاولة تزيد معلوماتك. راجعي الدرس وجربي مرة أخرى، فأنتِ قادرة على التقدّم.";medal="🌱"}
+ document.getElementById("resultTitle").textContent=title;document.getElementById("resultText").textContent=msg;document.getElementById("medal").textContent=medal;
+}
+function restart(){show("start");hide("end");}
+</script>
+</body>
+</html>
